@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* yukarıdaki CSS buraya eklenecek */
+  </style>
+  <title>Flex Column Example</title>
+</head>
+<body>
+  <div class="container">
+    <div class="block flex_TOP">Nacvar alanı olacak, Flex</div>
+    <div class="block flex_MAIN">İçerik alanı burası olacak</div>
+    <div class="block flex_BOTTOM">Copy v.s.</div>
+  </div>
+</body>
+</html>
+
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;   /* column Alt-alta, row yan yana Div gösterir */
+  height: 100vh;            /* 100vh: Ekranın yüksekliğini temsil eder */
+}
+
+.block {
+  flex: 1;
+  border: 0px solid #000; /* sadece blokları görmek için, isteğe bağlı */
+
+  padding: 5px;
+}
+
+.flex_TOP   {
+    /* flex:2;  Pixel sabit olması daha iyi. */
+    flex: 1;
+    __flex-basis: 50px;      /* Konuma göre Pixel cinsinden Değer, Otomatik */
+    background-color: blue;
+    color: beige;
+}
+.flex_MAIN  {
+    flex:12;
+    background-color: bisque;
+}
+.flex_BOTTOM{
+    /* flex:1;  Pixel sabit olması daha iyi. */
+    flex: 1;
+    __flex-basis: 10px;      /* Konuma göre Pixel cinsinden Değer, Otomatik */
+    background-color: rgb(202, 163, 238);
+}
+
+
+
+</style>
